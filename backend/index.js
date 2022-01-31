@@ -27,12 +27,15 @@ const session1 = {
 
 
 app.use(cookieSession(session1));
+const eventsR = require("./routes/events");
+
+app.use('/events', eventsR);
 //const userR = require("./routes/user");
 //const logR = require("./routes/logInOut");
-const eventsR = require("./routes/events");
+
 //const clubsR = require("./routes/clubs");
 //app.use('/clubs', clubsR);
-app.use('/events', eventsR);
+
 //app.use('/user', userR);
 //app.use('/log', logR);
 

@@ -3,7 +3,14 @@ var router = express.Router();
 
 
 const Event = require("../models/event");
-const Club = require("../models/club");
+
+
+
+router.get("/",(req,res) => {
+    Event.find({}, (err, events) => {
+        res.send(events);
+    });
+});
 
 
 
