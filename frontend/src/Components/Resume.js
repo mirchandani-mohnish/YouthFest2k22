@@ -3,11 +3,27 @@ import Slide from "react-reveal";
 import Event from './Event';
 import {Container, Row, Col} from "react-bootstrap";
 import './components.css';
-
+import EventDesc from './EventDesc';
 
 class Resume extends Component {
-  
+  constructor(props){
+    super(props);
+  }
+  // constructor(props){
+  //   this.state = {
+  //     isModalOpen: false,
+  //     ModalData: ""
+  //   }
+  // }
 
+
+  // toggleModal(ModalData){
+  //   const Modalstate = this.state.isModalOpen;
+  //   this.setState({
+  //     isModalOpen: !Modalstate,
+  //     ModalData: ModalData
+  //   })
+  // }
   render() {
     return (
       <section id="resume">
@@ -22,7 +38,7 @@ class Resume extends Component {
 
             <div className="eleven columns main-col">
               <div className="cards-list">
-                <Event />
+                <a href="#" onClick={(e) => {e.preventDefault();this.props.toggleModal();}} /><Event /></a>
                 <Event />
               </div>
             </div>

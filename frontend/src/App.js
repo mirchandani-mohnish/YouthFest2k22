@@ -14,7 +14,9 @@ class App extends Component {
     super(props);
     this.state = {
       foo: "bar",
-      resumeData: {}
+      resumeData: {},
+      isModalOpen: false,
+      ModalData: ""
     };
 
     ReactGA.initialize("UA-110570651-1");
@@ -36,6 +38,14 @@ class App extends Component {
     });
   }
 
+  toggleModal(ModalData){
+    const Modalstate = this.state.isModalOpen;
+    this.setState({
+      isModalOpen: !Modalstate,
+      ModalData: ModalData
+    })
+  }
+
   componentDidMount() {
     this.getResumeData();
   }
@@ -43,6 +53,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        {this.state.isModalOpen && <EventDesc onRequestClose={this.toggleModal} ModalData={this.state.ModalData}/>}
         <Header data={this.state.resumeData.main} />
         <About data={this.state.resumeData.main} />
         <Resume data={this.state.resumeData.resume} />
