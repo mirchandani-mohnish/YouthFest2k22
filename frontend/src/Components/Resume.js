@@ -6,20 +6,9 @@ import './components.css';
 
 
 class Resume extends Component {
-  getRandomColor() {
-    let letters = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
+  
 
   render() {
-    
-
-    
-
     return (
       <section id="resume">
         <Slide left duration={1300}>
