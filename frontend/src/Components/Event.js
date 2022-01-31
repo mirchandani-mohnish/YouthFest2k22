@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {Card} from 'react-bootstrap'
 import { ListGroup,ListGroupItem } from "react-bootstrap";
 import './components.css';
-
+import { Fade } from "react-reveal";
 
 
 export default class event extends Component{
