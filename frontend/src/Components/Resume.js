@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import Slide from "react-reveal";
+import Event from './Event';
+import {Container, Row, Col} from "react-bootstrap";
+import './components.css';
+
 
 class Resume extends Component {
   getRandomColor() {
@@ -60,19 +64,35 @@ class Resume extends Component {
           <div className="row education">
             <div className="three columns header-col">
               <h1>
-                <span>Education</span>
+                <span>Events</span>
               </h1>
+
             </div>
 
-            <div className="nine columns main-col">
-              <div className="row item">
+            <div className="eleven columns main-col">
+              {/* <div className="row item">
                 <div className="twelve columns">{education}</div>
+              </div> */}
+              <div className="cards-list">
+                <Event />
+                <Event />
               </div>
+
             </div>
           </div>
         </Slide>
 
-        <Slide left duration={1300}>
+        
+      </section>
+    );
+  }
+}
+
+export default Resume;
+
+
+
+/* <Slide left duration={1300}>
           <div className="row work">
             <div className="three columns header-col">
               <h1>
@@ -100,10 +120,4 @@ class Resume extends Component {
               </div>
             </div>
           </div>
-        </Slide>
-      </section>
-    );
-  }
-}
-
-export default Resume;
+        </Slide> */
