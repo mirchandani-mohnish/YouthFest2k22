@@ -13,7 +13,9 @@ router.get("/",(req,res) => {
 });
 
 
-
+router.get("/add",(req,res) => {
+    res.render('AddEvent')
+})
 
 router.post("/add", (req, res) => {
     

@@ -19,6 +19,9 @@ app.use(cors({
   origin: 'http://localhost:3000'
 }));
 
+app.set('view engine','ejs');
+app.set('views','./templates');
+
 const session1 = {
   secret: process.env.SESSION_SECRET,
   resave: false,
