@@ -37,7 +37,7 @@ class Resume extends Component {
   // }
   async componentDidMount(){
       try{
-          const eventList = await Axios.get(process.env.GET_EVENTS);
+          const eventList = await Axios.get('http://youthfest.tk:8000/events');
           
 
           this.setState({
