@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Slide from "react-reveal";
 import Event from './Event';
-import {Container, Row, Col} from "react-bootstrap";
+
 import './components.css';
-import EventDesc from './EventDesc';
+import Modal from './EventDesc';
 import Axios from 'axios';
 
 
@@ -14,10 +14,11 @@ class Resume extends Component {
     this.state = {
       EventArray: [],
       EventPg: false,
-      EventData: "",
+      CurrentEventData: "",
       
     }
     this.renderEvents = this.renderEvents.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
   // constructor(props){
   //   this.state = {
@@ -49,12 +50,25 @@ class Resume extends Component {
 
   }
 
-  
+  handleClick(currEvent){
+    this.setState({
+      EventPg: true,
+      CurrentEventData: currEvent
+    })
+    console.log("function called", this.state.EventPg);
+    
+  }
+  handleClose(){
+    this.setState({
+      EventPg: false,
+      CurrentEventData: ""
+    })
+  }
   renderEvents(){
     const allevents = this.state.EventArray;
     return allevents.map((currEvent) => (
         <div>
-          <a href="#" onClick={(e) => {e.preventDefault(); console.log("clicked");}} >
+          <a href="#" onClick={(e) => {e.preventDefault(); console.log("clicked"); this.handleClick(currEvent)}} >
             <Event key={currEvent._id} eventData={currEvent} />
           </a>
         </div>
@@ -68,26 +82,35 @@ class Resume extends Component {
   render() {
     
     return (
+      
       <section id="resume">
-        {/* {this.state.isModalOpen && <Modal onRequestClose={this.toggleModal} ModalData={this.state.ModalData} />} */}
         <Slide left duration={1300}>
-          <div className="row education">
-            <div className="three columns header-col">
-              <h1>
-                <span>Events</span>
-              </h1>
+        {/* {this.state.isModalOpen && <Modal onRequestClose={this.toggleModal} ModalData={this.state.ModalData} />} */}
+        
+        {this.state.EventPg === true ? (
+          <Modal currEvent={this.state.CurrentEventData} handleClose={this.handleClose} />
+        ):
+        (
+          <div>
+            <div className="row education">
+              <div className="three columns header-col">
+                <h1>
+                  <span>Events</span>
+                </h1>
 
-            </div>
+              </div>
 
-            <div className="eleven columns main-col">
-              <div className="cards-list">
-                {this.renderEvents()}
+              <div className="eleven columns main-col">
+                <div className="cards-list">
+                  {this.renderEvents()}
+                </div>
               </div>
             </div>
-          </div>
+          
+        </div>
+        )
+        }
         </Slide>
-
-        
       </section>
     );
   }
