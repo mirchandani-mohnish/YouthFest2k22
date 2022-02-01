@@ -3,12 +3,16 @@ import {Card} from 'react-bootstrap'
 import { ListGroup,ListGroupItem } from "react-bootstrap";
 import './components.css';
 import { Fade } from "react-reveal";
+import Modal from "./EventDesc";
 
-
-export default class event extends Component{
+export default class Event extends Component{
     constructor(props){
         super(props);
+        
+        
     }
+
+
 
 
 
@@ -18,7 +22,9 @@ export default class event extends Component{
                 <div className="card 1">
                   <div className="card_image"> <img src="https://i.redd.it/b3esnz5ra34y.jpg" /> </div>
                   <div className="card_title title-white">
+                  <a href="#" onClick={(e) => {e.preventDefault(); console.log("clicked");}} >
                     <p>Card Title</p>
+                  </a>  
                   </div>
                 </div>
             </div>

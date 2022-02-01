@@ -4,10 +4,20 @@ import Event from './Event';
 import {Container, Row, Col} from "react-bootstrap";
 import './components.css';
 import EventDesc from './EventDesc';
+import Axios from 'axios';
+
+
 
 class Resume extends Component {
   constructor(props){
     super(props);
+    this.state = {
+      EventArray: [],
+      EventPg: false,
+      EventData: "",
+      
+    }
+    
   }
   // constructor(props){
   //   this.state = {
@@ -24,9 +34,39 @@ class Resume extends Component {
   //     ModalData: ModalData
   //   })
   // }
+  async componentDidMount(){
+      try{
+          const eventList = await Axios.get("http://localhost:8000/events");
+          
+
+          this.setState({
+              EventArray: eventList
+          })
+      }catch(err){
+          console.log(err);
+          
+      }
+
+  }
+
+  
+  renderEvents(){
+    const EventList = this.state.EventArray;
+    return EventList.map((currEvent) => (
+      <>
+          
+          <Event eventData={currEvent} />
+          
+      </>
+      
+    ))
+  }
+
+
   render() {
     return (
       <section id="resume">
+        {/* {this.state.isModalOpen && <Modal onRequestClose={this.toggleModal} ModalData={this.state.ModalData} />} */}
         <Slide left duration={1300}>
           <div className="row education">
             <div className="three columns header-col">
@@ -38,7 +78,7 @@ class Resume extends Component {
 
             <div className="eleven columns main-col">
               <div className="cards-list">
-                <a href="#" onClick={(e) => {e.preventDefault();this.props.toggleModal();}} /><Event /></a>
+                
                 <Event />
               </div>
             </div>

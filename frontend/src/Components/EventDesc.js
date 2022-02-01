@@ -2,7 +2,6 @@ import {React, useState, useEffect} from 'react';
 import './EventDesc.css';
 
 
-const { useState, useEffect } = React;
 
 const Modal = ({ onRequestClose }) => {
 	// Use useEffect to add an event listener to the document
@@ -37,7 +36,7 @@ const Modal = ({ onRequestClose }) => {
 				<p>
 					To close this modal, press the button below or use the Escape key on desktop.
 				</p>
-				<button type="button" onClick={onRequestClose}>
+				<button type="button" onClick={() => {onRequestClose("")}} >
 					Close this modal
 				</button>
 				<div className="placeholder" />
