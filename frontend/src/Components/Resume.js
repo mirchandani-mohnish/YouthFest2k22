@@ -17,7 +17,7 @@ class Resume extends Component {
       EventData: "",
       
     }
-    
+    this.renderEvents = this.renderEvents.bind(this);
   }
   // constructor(props){
   //   this.state = {
@@ -40,7 +40,7 @@ class Resume extends Component {
           
 
           this.setState({
-              EventArray: eventList
+              EventArray: eventList.data
           })
       }catch(err){
           console.log(err);
@@ -51,19 +51,22 @@ class Resume extends Component {
 
   
   renderEvents(){
-    const EventList = this.state.EventArray;
-    return EventList.map((currEvent) => (
-      <>
+    const allevents = this.state.EventArray;
+    return allevents.map((currEvent) => (
+        <div>
+          <a href="#" onClick={(e) => {e.preventDefault(); console.log("clicked");}} >
+            <Event key={currEvent._id} eventData={currEvent} />
+          </a>
+        </div>
           
-          <Event eventData={currEvent} />
-          
-      </>
+
       
     ))
   }
 
 
   render() {
+    
     return (
       <section id="resume">
         {/* {this.state.isModalOpen && <Modal onRequestClose={this.toggleModal} ModalData={this.state.ModalData} />} */}
@@ -78,8 +81,7 @@ class Resume extends Component {
 
             <div className="eleven columns main-col">
               <div className="cards-list">
-                
-                <Event />
+                {this.renderEvents()}
               </div>
             </div>
           </div>

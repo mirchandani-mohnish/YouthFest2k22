@@ -22,9 +22,9 @@ export default class Event extends Component{
                 <div className="card 1">
                   <div className="card_image"> <img src="https://i.redd.it/b3esnz5ra34y.jpg" /> </div>
                   <div className="card_title title-white">
-                  <a href="#" onClick={(e) => {e.preventDefault(); console.log("clicked");}} >
-                    <p>Card Title</p>
-                  </a>  
+                  
+                    <p>{this.props.eventData.eventName}</p>
+                  
                   </div>
                 </div>
             </div>
