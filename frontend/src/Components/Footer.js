@@ -10,7 +10,7 @@ class Footer extends Component {
             <div className="twelve columns">
               <ul className="social-links">
               <li>
-                <a href="">
+                <a href="https://instagram.com/ahduni_youthfest?utm_medium=copy_link">
                   <i className="fa fa-instagram"></i>
                 </a>
                 </li>
