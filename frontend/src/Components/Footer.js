@@ -11,7 +11,12 @@ class Footer extends Component {
               <ul className="social-links">
               <li>
                 <a href="">
-                  <i className="instagram"></i>
+                  <i className="fa fa-instagram"></i>
+                </a>
+                </li>
+                <li>
+                <a href="mailto:youth.festival@ahduni.edu.in">
+                  <i className="fa fa-envelope"></i>
                 </a>
               </li>
 

@@ -13,7 +13,7 @@ class Contact extends Component {
           <div className="row section-head">
             <div className="two columns header-col">
               <h1>
-                Write something to us...
+                Contact Us
               </h1>
             </div>
 
@@ -87,7 +87,7 @@ class Contact extends Component {
                 </fieldset>
               </form>
 
-              <div id="message-warning"> Error boy</div>
+              <div id="message-warning"> Error</div>
               <div id="message-success">
                 <i className="fa fa-check"></i>Your message was sent, thank you!
                 <br />
@@ -124,13 +124,12 @@ class Contact extends Component {
                   </li>
                 </ul>
               </div>
-              <div className="widget widget_contact">
+              {/* <div className="widget widget_contact">
                 <h4>Site Resources</h4>
                 <p className="address">
-                  This site is brought to you by the programming club of Ahmedabad University.
                   If you find some issues or bugs with the site please open an issue here. 
                 </p>
-              </div>
+              </div> */}
             </aside>
           </Slide>
         </div>
