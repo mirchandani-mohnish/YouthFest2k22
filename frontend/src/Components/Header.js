@@ -59,10 +59,10 @@ class Header extends Component {
         <div className="row banner">
           <div className="banner-text">
             <Fade bottom>
-              <h1 className="responsive-headline">YouthFest</h1>
+              <h1 className="responsive-headline">Youth Fest 2k22</h1>
             </Fade>
             <Fade bottom duration={1200}>
-              <h3>Some Description about YouthFest</h3>
+              <h3>Welcome to the official website for the annual student fest held by Ahmedabad University</h3>
             </Fade>
             <hr />
             <Fade bottom duration={2000}>

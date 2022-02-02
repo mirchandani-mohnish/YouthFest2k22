@@ -21,17 +21,27 @@ class About extends Component {
         <Fade duration={1000}>
           <div className="row">
             <div className="three columns">
+              {/*<a href="https://www.fontspace.com/category/traditional"><img src="https://see.fontimg.com/api/renderfont4/4ByZp/eyJyIjoiZnMiLCJoIjoxNDMsInciOjEyOTcsImZzIjoxMTAsImZnYyI6IiNFODAxMDEiLCJiZ2MiOiIjMzkwMzAzIn0/WUY/mahaputra.png" alt="Traditional fonts"></a> */}
               <img
                 className="profile-pic"
-                src={profilepic}
-                alt="Nordic Giant Profile Pic"
+                src="https://see.fontimg.com/api/renderfont4/4ByZp/eyJyIjoiZnMiLCJoIjo3MCwidyI6MTI5NywiZnMiOjU0LCJmZ2MiOiIjRTgwMTAxIiwiYmdjIjoiIzM5MDMwMyJ9/WUYg/mahaputra.png"
+                alt="Youth Fest 2k22"
               />
             </div>
             <div className="nine columns main-col">
               <h2>About YouthFest</h2>
 
               <p>
-                YouthFest is the cultural festival of Ahmedabad University something somethin else....
+              Every year, The Youthfest celebrates the student community, allowing us to 
+              express and showcase their talents and take part in a joyous 
+              celebration of creative expression. We are back with a bang this year, and we have exciting news!<br />
+              We are delighted to announce the theme of the Youth Festival 2022, which is: <br />
+              India Recalled <br />
+              With this theme, we at Ahmedabad University wish to go back to our roots, 
+              our traditions and recall our culture. There is a lot to learn from our own history, 
+              from ancient civilisations to post-independence. Our diverse cultures give us the opportunity 
+              to explore the numerous traditional knowledge systems. Delving deep into our roots will allow 
+              us to reinvent and redefine what culture and history mean to us, the youth, now.
               </p>
               <div className="row">
                 {/* <div className="columns contact-details">
@@ -52,9 +62,9 @@ class About extends Component {
                 </div> */}
                 <div className="columns download">
                   <p>
-                    <a href="#" className="button">
+                    {/* <a href="#" className="button">
                       <i className="fa fa-archive"></i>Archives
-                    </a>
+                    </a> */}
                   </p>
                 </div>
               </div>
