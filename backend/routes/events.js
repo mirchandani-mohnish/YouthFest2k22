@@ -14,8 +14,13 @@ router.get("/",(req,res) => {
 
 
 
-
-router.post("/add", (req, res) => {
+router.get("/add", (req,res) => {
+    Event.find({}, (err, events) => {
+        res.render("addEvent",{allevents:events});
+    });
+    
+});
+router.post("/add", async (req, res) => {
     
     const eventName = req.body.eventName;
     const clubName = req.body.clubName;
@@ -24,6 +29,8 @@ router.post("/add", (req, res) => {
     const eventForm = req.body.formLink;
     const eventEmbedCode = req.body.formEmbedCode;
     const imageLink = req.body.imageLink;
+
+    console.log(JSON.stringify(req.body));
     let newEvent = new Event({
         eventName: eventName,
         eventDescription: eventDescription,
@@ -35,24 +42,39 @@ router.post("/add", (req, res) => {
     })
     console.log(newEvent);
 
-    newEvent.save((err) => {
+    await newEvent.save((err) => {
         if (err) console.log(err);
-
-        Club.findOne({ "clubName": clubName }, function (err, club) {
-            if (club) {
-                club.events.push(newEvent);
-                club.save((err) => {
-                    if (err) {
-                        res.send(err);
-                    } else {
-                        res.send("Success");
-                    }
-                });
-            }
-        });
+        
+        // Club.findOne({ "clubName": clubName }, function (err, club) {
+        //     if (club) {
+        //         club.events.push(newEvent);
+        //         club.save((err) => {
+        //             if (err) {
+        //                 res.send(err);
+        //             } else {
+        //                 res.send("Success");
+        //             }
+        //         });
+        //     }
+        // });
     })
+    res.redirect("/events/add")
    
 });
+
+
+
+
+router.get("/delete/:_id", (req,res) => {
+    const { _id } = req.params;
+    Event.deleteOne({ _id })
+      .then(() => {
+        console.log("Deleted Todo Successfully!");
+        res.redirect("/events/add");
+      })
+      .catch((err) => console.log(err));
+});
+
 
 
 module.exports = router;
