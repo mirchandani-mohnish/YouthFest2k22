@@ -27,6 +27,11 @@ const session1 = {
 
 
 app.use(cookieSession(session1));
+
+app.set('view engine','ejs');
+app.set('views','./templates');
+
+
 const eventsR = require("./routes/events");
 
 app.use('/events', eventsR);
