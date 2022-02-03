@@ -22,8 +22,8 @@ export default class Event extends Component{
                 <div className="card 1">
                   <div className="card_image"> 
                   <img 
-                  src={this.props.eventData.eventImage ? 
-                    (this.props.eventData.eventImage):
+                  src={this.props.eventData.imageLink ? 
+                    (this.props.eventData.imageLink):
                     ("https://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif")}
                      /> 
                   </div>

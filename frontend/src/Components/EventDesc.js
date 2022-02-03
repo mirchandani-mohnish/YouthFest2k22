@@ -21,8 +21,8 @@ class Modal extends Component{
 					<div className="three columns">
 					<img
 						className="eventpicture"
-						src={this.props.currEvent.eventImage ? 
-							(this.props.currEvent.eventImage):
+						src={this.props.currEvent.imageLink ? 
+							(this.props.currEvent.imageLink):
 							("https://media.giphy.com/media/LwIyvaNcnzsD6/giphy.gif")}
 						alt="EventImage"
 					/>
