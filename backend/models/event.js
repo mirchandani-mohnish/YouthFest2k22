@@ -8,7 +8,10 @@ var eventSchema = new Schema({
     eventName: { type:String, required: true},
     eventDescription: {type: String},
     clubName: { type:String,required:true},
-    date: {type: Date, default: Date.now}
+    date: {type: Date, default: Date.now},
+    eventForm: {type: String},
+    eventEmbedCode: {type:String},
+    imageLink: {type: String}
 });
 
 

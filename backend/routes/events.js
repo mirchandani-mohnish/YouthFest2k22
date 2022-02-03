@@ -20,11 +20,18 @@ router.post("/add", (req, res) => {
     const eventName = req.body.eventName;
     const clubName = req.body.clubName;
     const eventDescription = req.body.eventDescription;
-
+    const eventDate = req.body.eventDate;
+    const eventForm = req.body.formLink;
+    const eventEmbedCode = req.body.formEmbedCode;
+    const imageLink = req.body.imageLink;
     let newEvent = new Event({
         eventName: eventName,
         eventDescription: eventDescription,
-        clubName: clubName
+        clubName: clubName,
+        date: eventDate,
+        eventForm: eventForm,
+        eventEmbedCode: eventEmbedCode,
+        imageLink: imageLink
     })
     console.log(newEvent);
 
