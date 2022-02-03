@@ -3,6 +3,7 @@ import Slide from "react-reveal";
 import Event from './Event';
 
 import './components.css';
+import './css/searchbar.css';
 import Modal from './EventDesc';
 import Axios from 'axios';
 
@@ -15,26 +16,16 @@ class Resume extends Component {
       EventArray: [],
       EventPg: false,
       CurrentEventData: "",
-      
+      searchVal:"",
     }
+
+    this.searchBoxRef = React.createRef();
+
     this.renderEvents = this.renderEvents.bind(this);
     this.handleClose = this.handleClose.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
   }
-  // constructor(props){
-  //   this.state = {
-  //     isModalOpen: false,
-  //     ModalData: ""
-  //   }
-  // }
-
-
-  // toggleModal(ModalData){
-  //   const Modalstate = this.state.isModalOpen;
-  //   this.setState({
-  //     isModalOpen: !Modalstate,
-  //     ModalData: ModalData
-  //   })
-  // }
+  
   async componentDidMount(){
       try{
           const eventList = await Axios.get('http://youthfest.tk:8000/events');
@@ -64,9 +55,24 @@ class Resume extends Component {
       CurrentEventData: ""
     })
   }
+
+  handleSearch(){
+    this.setState({
+        searchVal: this.searchBoxRef.current.value
+    })
+    
+  }
+
+
   renderEvents(){
     const allevents = this.state.EventArray;
-    return allevents.map((currEvent) => (
+
+    const filteredEvents = this.state.EventArray.filter((event) => {
+        return Object.values(event).join("").toLowerCase().includes(this.state.searchVal.toLowerCase());
+        
+    });
+
+    return filteredEvents.map((currEvent) => (
         <div>
           <a href="#" onClick={(e) => {e.preventDefault(); console.log("clicked"); this.handleClick(currEvent)}} >
             <Event key={currEvent._id} eventData={currEvent} />
@@ -77,6 +83,10 @@ class Resume extends Component {
       
     ))
   }
+
+
+
+ 
 
 
   render() {
@@ -93,10 +103,16 @@ class Resume extends Component {
         (
           <div>
             <div className="row education">
-              <div className="three columns header-col">
+              <div className="twelve columns header-col">
                 <h1>
                   <span>Events</span>
                 </h1>
+                <form id="searchBar">
+                  <input ref={this.searchBoxRef} type="search" 
+                  placeholder="Search" 
+                  defaultValue={this.state.searchVal} 
+                  onChange={this.handleSearch}/>
+                </form>
 
               </div>
 
