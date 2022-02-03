@@ -54,7 +54,7 @@ class Modal extends Component{
 				
 				<div className="twelve columns main-col">
 				<div className="googleFormData">
-					<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfdDYSMideeVMUqqxVl8GodhPO_8Sc9Tu3vklLDOSEi_FJiQg/viewform?embedded=true" width="640" height="2245" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+					{/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfdDYSMideeVMUqqxVl8GodhPO_8Sc9Tu3vklLDOSEi_FJiQg/viewform?embedded=true" width="640" height="2245" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> */}
 				</div>
 				</div>
 				</div>
