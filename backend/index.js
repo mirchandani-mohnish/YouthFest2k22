@@ -3,8 +3,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path');
-
-
+const {verify} = require('./middleware')
+const cookieparser = require('cookie-parser');
 
 const cookieSession = require('cookie-session');
 require('dotenv').config({path: __dirname + '/.env'});
@@ -18,6 +18,7 @@ app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
 app.use(cors({
   origin: ['http://localhost:3000','http://youthfest.tk']
 }));
+app.use(cookieparser());
 
 const session1 = {
   secret: process.env.SESSION_SECRET,
@@ -33,8 +34,10 @@ app.set('views','./templates');
 
 
 const eventsR = require("./routes/events");
-
+const adminR = require("./routes/admin");
 app.use('/events', eventsR);
+app.use('/admin', verify, adminR);
+
 //const userR = require("./routes/user");
 //const logR = require("./routes/logInOut");
 
