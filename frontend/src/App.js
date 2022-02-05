@@ -50,14 +50,17 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App ">
         
         <Header data={this.state.resumeData.main} />
+        <div className="backgroundMain">
         <About data={this.state.resumeData.main} />
         <Resume />
         <Portfolio />
         <Contact />
         <Footer />
+        </div>
+        
       </div>
     );
   }

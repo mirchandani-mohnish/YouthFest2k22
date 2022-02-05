@@ -1,0 +1,9 @@
+.backgroundMain{
+    background:linear-gradient(217deg, rgba(254, 90, 21,1), rgb(254, 90, 21,0) 70.71%),
+               linear-gradient(127deg, rgba(26, 169, 95,1), rgba(26, 169, 95,0) 70.71%),
+               linear-gradient(336deg, rgba(38, 172, 155,1), rgba(38, 172, 155,0) 70.71%);
+}
+
+/*
+26, 169, 95
+*/

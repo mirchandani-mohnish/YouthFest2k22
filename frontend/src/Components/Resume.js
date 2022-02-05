@@ -105,7 +105,7 @@ class Resume extends Component {
             <div className="row education">
               <div className="twelve columns header-col">
                 <h1>
-                  <span>Events</span>
+                  <span style={{color:"white"}}>Events</span>
                 </h1>
                 <form id="searchBar">
                   <input ref={this.searchBoxRef} type="search" 
