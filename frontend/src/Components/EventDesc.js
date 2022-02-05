@@ -27,10 +27,10 @@ class Modal extends Component{
 						alt="EventImage"
 					/>
 					</div>
-					<div className="nine columns main-col">
-					<h2>{this.props.currEvent.eventName}</h2>
-					<h4>Club:{this.props.currEvent.clubName}</h4>
-					<h4>Date and Time: {this.state.eventDate.getDate()}  at {this.state.eventDate.getHours()}:{this.state.eventDate.getMinutes()} hours</h4>
+					<div className="nine columns main-col" style={{color:"white"}}>
+					<h2 style={{color:"white"}}>{this.props.currEvent.eventName}</h2>
+					<h4 style={{color:"white"}}>Club:{this.props.currEvent.clubName}</h4>
+					<h4 style={{color:"white"}}>Date and Time: {this.state.eventDate.getDate()}  at {this.state.eventDate.getHours()}:{this.state.eventDate.getMinutes()} hours</h4>
 					<p>
 					{this.props.currEvent.eventDescription}
 
