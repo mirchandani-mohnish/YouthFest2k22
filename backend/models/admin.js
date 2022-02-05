@@ -10,4 +10,4 @@ var adminSchema = new Schema({
 });
 
 
-module.exports = mongoose.model("admins",adminSchema,"admin");
+module.exports = mongoose.model("admin",adminSchema,"admins");

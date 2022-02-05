@@ -36,7 +36,7 @@ app.set('views','./templates');
 const eventsR = require("./routes/events");
 const adminR = require("./routes/admin");
 app.use('/events', eventsR);
-app.use('/admin', verify, adminR);
+app.use('/admin', adminR);
 
 //const userR = require("./routes/user");
 //const logR = require("./routes/logInOut");

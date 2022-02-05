@@ -1,9 +1,9 @@
 var express = require("express");
 var router = express.Router();
 
-
+const bcrypt = require('bcryptjs')
 const Admin = require("../models/admin");
-
+const jwt = require('jsonwebtoken');
 
 
 
@@ -35,7 +35,7 @@ router.post("/login",async (req,res) => {
         
         try{
             payload = {username: username};
-            if(await bcrypt.compare(req.body.password,tempuser.password)){
+            if(await bcrypt.compare(req.body.password,tempuser.passWord)){
                 console.log("logged in");
                 
 

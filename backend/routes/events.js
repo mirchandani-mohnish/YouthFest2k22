@@ -1,4 +1,5 @@
 var express = require("express");
+const { verify } = require("../middleware");
 var router = express.Router();
 
 
@@ -14,13 +15,13 @@ router.get("/",(req,res) => {
 
 
 
-router.get("/add", (req,res) => {
+router.get("/add",verify, (req,res) => {
     Event.find({}, (err, events) => {
         res.render("addEvent",{allevents:events});
     });
     
 });
-router.post("/add", async (req, res) => {
+router.post("/add", verify, async (req, res) => {
     
     const eventName = req.body.eventName;
     const clubName = req.body.clubName;
