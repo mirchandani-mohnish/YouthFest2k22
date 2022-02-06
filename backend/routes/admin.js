@@ -56,7 +56,7 @@ router.post("/login",async (req,res) => {
                 tempuser.token = refreshToken;
                 
                 res.cookie("mcook", accessToken, {secure: true, httpOnly: true});
-                res.redirect('/');
+                res.redirect('/events/add');
             }else{
                 console.log("failed");
                 res.status(203).send();

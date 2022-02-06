@@ -11,7 +11,7 @@ class Modal extends Component{
 		};
 	}
 
-
+	
 
 	render(){
 		return(
@@ -53,9 +53,9 @@ class Modal extends Component{
 
 				
 				<div className="twelve columns main-col">
-					<p>If the form is not visible for some reason please <a href={this.props.currEvent.formLink}>click here</a></p>
+					<p>If the form is not visible for some reason please <a href={this.props.currEvent.eventForm}>click here</a></p>
 					<div className="googleFormData">
-						<iframe src={this.props.currEvent.formLink} width={(window.innerWidth) <= 700 ? (toString(window.innerWidth)):("700")} height="5000" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
+						<iframe src={this.props.currEvent.eventForm} width={(window.innerWidth) <= 700 ? (toString(window.innerWidth)):("700")} height="5000" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
 					</div>
 					{/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScyJQc2oFAU5OWWABwRXE72zLp7DMmhlNAJ3j2c7jQev_PTWA/viewform?embedded=true" width="640" height="986" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> */}
 				</div> 
