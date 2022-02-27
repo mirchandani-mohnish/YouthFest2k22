@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Fade from "react-reveal";
+import './css/About.css';
+
 
 class About extends Component {
   render() {
@@ -10,12 +12,12 @@ class About extends Component {
     return (
       <section id="about">
         <Fade duration={1000}>
-          <div className="row">
+          <div className="row wrapperBox">
             <div className="three columns">
               {/*<a href="https://www.fontspace.com/category/traditional"><img src="https://see.fontimg.com/api/renderfont4/4ByZp/eyJyIjoiZnMiLCJoIjoxNDMsInciOjEyOTcsImZzIjoxMTAsImZnYyI6IiNFODAxMDEiLCJiZ2MiOiIjMzkwMzAzIn0/WUY/mahaputra.png" alt="Traditional fonts"></a> */}
               <img
                 className="profile-pic"
-                src="https://see.fontimg.com/api/renderfont4/4ByZp/eyJyIjoiZnMiLCJoIjo3MCwidyI6MTI5NywiZnMiOjU0LCJmZ2MiOiIjRTgwMTAxIiwiYmdjIjoiIzM5MDMwMyJ9/WUYg/mahaputra.png"
+                src="/images/AUlogo.png"
                 alt="Youth Fest 2k22"
               />
             </div>
