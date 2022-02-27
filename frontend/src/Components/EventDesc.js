@@ -9,8 +9,13 @@ class Modal extends Component{
 		this.state = {
 			eventDate: new Date(this.props.currEvent.date)
 		};
+		this.convertMonth = this.convertMonth.bind(this);
 	}
 
+	convertMonth(monthval){
+		const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+		return months[monthval - 1];
+	}
 	
 
 	render(){
@@ -29,8 +34,7 @@ class Modal extends Component{
 					</div>
 					<div className="nine columns main-col" style={{color:"white"}}>
 					<h2 style={{color:"white"}}>{this.props.currEvent.eventName}</h2>
-					<h4 style={{color:"white"}}>Club:{this.props.currEvent.clubName}</h4>
-					<h4 style={{color:"white"}}>Date and Time: {this.state.eventDate.getDate()}  at {this.state.eventDate.getHours()}:{this.state.eventDate.getMinutes()} hours</h4>
+					<h4 style={{color:"white"}}>Date and Time: {this.convertMonth(this.state.eventDate.getMonth())} {this.state.eventDate.getDate()} at {this.state.eventDate.getHours()}:{this.state.eventDate.getMinutes()} hours</h4>
 					<p>
 					{this.props.currEvent.eventDescription}
 
