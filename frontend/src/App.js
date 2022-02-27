@@ -54,11 +54,13 @@ class App extends Component {
         
         <Header data={this.state.resumeData.main} />
         <div className="backgroundMain">
-        <About data={this.state.resumeData.main} />
-        <Resume />
-        <Portfolio />
-        <Contact />
-        <Footer />
+          <div className="layer">
+          <About data={this.state.resumeData.main} />
+          <Resume />
+          <Portfolio />
+          <Contact />
+          <Footer />
+          </div>
         </div>
         
       </div>
