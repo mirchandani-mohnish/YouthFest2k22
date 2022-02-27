@@ -131,7 +131,7 @@ class Contact extends Component {
                   <ul id="twitter">
                     <li>
                       <span>
-                        <a href="">Palak Binaykia</a>
+                        <a href="https://wa.link/f67tba">Palak Binaykia</a>
                       </span>
                     </li>
                     <li>
