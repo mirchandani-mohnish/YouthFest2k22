@@ -102,7 +102,7 @@ class Contact extends Component {
               <aside className="four columns footer-widgets">
                 
                 <div className="widget widget_tweets">
-                  <h4 className="widget-title">YouthFest.tk</h4>
+                  <h4 className="widget-title">Youth Fest</h4>
                   <ul id="twitter">
                     <li>
                       <span>
