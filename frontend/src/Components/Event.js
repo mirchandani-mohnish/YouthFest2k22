@@ -22,9 +22,10 @@ export default class Event extends Component{
                 <div className="card 1">
                   <div className="card_image"> 
                   <img 
-                  src={this.props.eventData.imageLink ? 
-                    (this.props.eventData.imageLink):
-                    ("https://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif")}
+                    src="https://media.giphy.com/media/o6wVNobOsx8bs2eno2/giphy.gif"
+                  // src={this.props.eventData.imageLink ? 
+                  //   (this.props.eventData.imageLink):
+                  //   ("https://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif")}
                      /> 
                   </div>
                   <div className="card_title title-white">
