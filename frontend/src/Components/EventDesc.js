@@ -34,7 +34,7 @@ class Modal extends Component{
 					</div>
 					<div className="nine columns main-col" style={{color:"white"}}>
 					<h2 style={{color:"white"}}>{this.props.currEvent.eventName}</h2>
-					<h4 style={{color:"white"}}>Date and Time: {this.convertMonth(this.state.eventDate.getMonth())} {this.state.eventDate.getDate()} at {this.state.eventDate.getHours()}:{this.state.eventDate.getMinutes()} hours</h4>
+					<h4 style={{color:"white"}}>Date and Time: {this.props.currEvent.date}</h4>
 					<p>
 					{this.props.currEvent.eventDescription}
 
