@@ -8,6 +8,7 @@ import About from "./Components/About";
 import Resume from "./Components/Resume";
 import Contact from "./Components/Contact";
 import Portfolio from "./Components/Portfolio";
+import Schedule from "./Components/Schedule";
 
 
 
@@ -55,6 +56,7 @@ class App extends Component {
           <div className="layer">
           <Header data={this.state.resumeData.main} />
           <About data={this.state.resumeData.main} />
+          <Schedule />
           <Resume />
           <Portfolio />
           <Contact />

@@ -136,7 +136,7 @@ class Contact extends Component {
                     </li>
                     <li>
                       <span>
-                        <a href="">Akansha Tated</a>
+                        <a href="https://wa.me/qr/HL3PHGNU747BO1">Akansha Tated</a>
                       </span>
                     </li>
                   </ul>
