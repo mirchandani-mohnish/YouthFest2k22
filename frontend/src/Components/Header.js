@@ -61,9 +61,9 @@ class Header extends Component {
             <Fade bottom>
               <h1 className="responsive-headline">Youth Fest 2022</h1>
             </Fade>
-            {/* <Fade bottom duration={1200}>
-              <h3>Welcome to the official website for the annual student fest held by Ahmedabad University</h3>
-            </Fade> */}
+            <Fade bottom duration={1200}>
+              <h3 style={{color:"white"}}>Click on the events to register and know more about them!</h3>
+            </Fade>
             <hr />
             <Fade bottom duration={2000}>
               <ul className="social">
