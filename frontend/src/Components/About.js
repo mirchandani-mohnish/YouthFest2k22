@@ -25,16 +25,12 @@ class About extends Component {
               <h2>About YouthFest</h2>
 
               <p>
-              Every year, The Youthfest celebrates the student community, allowing us to 
-              express and showcase their talents and take part in a joyous 
-              celebration of creative expression. We are back with a bang this year, and we have exciting news!<br />
-              We are delighted to announce the theme of the Youth Festival 2022, which is: <br />
-              India Recalled <br />
-              With this theme, we at Ahmedabad University wish to go back to our roots, 
-              our traditions and recall our culture. There is a lot to learn from our own history, 
-              from ancient civilisations to post-independence. Our diverse cultures give us the opportunity 
-              to explore the numerous traditional knowledge systems. Delving deep into our roots will allow 
-              us to reinvent and redefine what culture and history mean to us, the youth, now.
+              The Youth Fest is a vibrant platform for students of the University to showcase their talent, to sharpen their skills,  to creatively express themselves, to mingle, to collaborate and of course to build lifelong memories.
+              The Youth Fest is back with a bang this year, and we have some very  exciting news!<br />
+              We are delighted to announce the theme of Youth Fest 2022, which is: "India Recalled"
+              With this theme, we at Ahmedabad University wish to go back to our roots, our traditions and revisit our culture. There is a lot to learn from our own history; from ancient civilisations to post- independence era. The diversity in our culture gives us the opportunity to explore both; traditional and contemporary knowledge systems.
+              <br />Delving deep into our roots will allow us to reinvent and redefine what culture and history mean to us.We invite you on board to experience an exciting mix of events, competitions and performances!
+              <br /><b>Watch out for our emails and follow our Instagram for more updates!</b>
               </p>
               <div className="row">
                 {/* <div className="columns contact-details">
