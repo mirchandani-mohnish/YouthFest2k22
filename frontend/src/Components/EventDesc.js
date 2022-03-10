@@ -38,7 +38,9 @@ class Modal extends Component{
 					<h4 style={{color:"white"}}>Date and Time: {this.props.currEvent.date}</h4>
 					<p>
 					{this.props.currEvent.eventDescription}
-
+					<br />
+					<br />
+					You can go through the rule book <a href='https://drive.google.com/file/d/1uTz7xuy2qwpK6Lm-0Mo-1Yv6Dd-igRg9/view?usp=sharing'>here</a>
 					</p>
 
 					<div className="row">
